@@ -103,3 +103,14 @@ settings.ini
 
 # mypy
 .mypy_cache/
+
+# INI config files
+.ini
+
+# vscode
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
