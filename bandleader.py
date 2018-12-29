@@ -5,6 +5,7 @@ from collections import namedtuple
 from threading import Thread
 from os.path import isfile
 import csv
+from decouple import config
 
 BANDCAMP_FRONTPAGE='https://bandcamp.com/'
 
@@ -29,6 +30,7 @@ class BandLeader():
                 dbreader = csv.reader(dbfile)
                 next(dbreader)   # to ignore the header line
                 self.database = [TrackRec._make(rec) for rec in dbreader]
+                # what does the _make method of a named tuple do?
 
         # create a headless browser
         opts = Options()
